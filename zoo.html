@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Ruchika Suri">
+    <meta name="Description" content="Donald Farms">
+    <meta name="viewport" content="user-scalable = no">
+    <title>Zoo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/gallery.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/612f5a882c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/bic-compressed-824329/logo.png" alt="Logo"></a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-ul">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="zoo.html">ZOO</a></li>
+                <li><a href="cafe.html">CAFE</a></li>
+                <li><a href="park.html">PARK</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="zoo-header">Welcome To Our Farm Zoo</p>
+
+        <p class="zoo-text">The Farm Zoo offers a fun, interactive experience, where you can get up close with friendly farm animals. <br>
+            From playful goats and fluffy chickens to gentle cows and curious pigs, it's an adventure in the heart of nature.</p>
+        <p></p>  
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 10</div>
+              <img src="images/optimized_1MB_zoo 4-min.jpg" style="width:100%">
+              <div class="text"></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 10</div>
+              <img src="images/optimized_1MB_zoo (3)-min.jpg" style="width:100%">
+              <div class="text"></div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 10</div>
+              <img src="images/optimized_1MB_zoo (2)-min.jpg" style="width:100%">
+              <div class="text"></div>
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="images/optimized_1MB_zoo-min.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="images/optimized_1MB_farm 1-min.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="images/optimized_1MB_farm 1-min.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="images/optimized_1MB_zoo (3)-min.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+              <div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="images/Zoo8.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+              <div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="images/optimized_1MB_farm.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+              
+              <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="images/optimized_1MB_farm 1-min.jpg" style="width:100%">
+                <div class="text"></div>
+              </div>
+        
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+          </div>
+        
+          <script>
+            let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        } 
+          </script>
+        
+ 
+        
+    </main>
+    <footer>
+        <div class="social">
+            <a href="http://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="http://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            <a href="http://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>&copy; Donald Farms </p>
+    </footer>
+</body>
+</html>
